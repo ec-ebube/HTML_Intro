@@ -1,0 +1,190 @@
+.nav {
+  display: flex;
+  height: 25px;
+  background-color: #333;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: #ffe;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.Pseudo::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+.Pseudo::first-line {
+  color: #0000ff;
+  font-variant: small-caps;
+}
+body {
+  counter-reset: number;
+}
+h2::before {
+  counter-increment: number;
+  content: "Number" counter(number) ": ";
+  color: #ff8;
+}
+.header {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 20px;
+}
+.header::selection {
+  color: black;
+  background-color: green;
+}
+.grad {
+  text-align: center;
+  background-image: conic-gradient(red, green, blue);
+  box-shadow: 10px 10px 5px lightblue;
+}
+.outer {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  height: 160px;
+  width: 160px;
+  background-color: orange;
+  border-radius: 10px;
+  border: 3px solid #ffa;
+  transition: 2s;
+  /* transform: translate(50px, 100px); */
+  /* transform: rotate(20deg); */
+}
+.box:hover {
+  transform: matrix(1, -0.3, 0, 1, 10, 0);
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  color: #000;
+}
+/* 19 june 2023 */
+.outer2,
+.outer3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container,
+.container2,
+.container3 {
+  height: 100px;
+  width: 100px;
+  background-color: #af0;
+  border: 2px solid #ffe;
+  transition: 5s;
+}
+.container:active {
+  transform: rotateX(150deg);
+}
+.container2:hover {
+  transform: rotateY(150deg);
+}
+.container3:hover {
+  transform: rotateZ(90deg);
+}
+.bottle1 {
+  height: 120px;
+  width: 120px;
+  background-color: #deb887;
+  border: 2px solid #000;
+  animation-name: colors;
+  animation-duration: 4s;
+}
+@keyframes colors {
+  from {
+    background-color: #deb887;
+  }
+  to {
+    background-color: #af0;
+  }
+}
+.bottle2 {
+  height: 120px;
+  width: 120px;
+  background-color: #e1f;
+  border: 2px solid #000;
+  animation-name: colors2;
+  animation-duration: 10s;
+}
+@keyframes colors2 {
+  0% {
+    background-color: #e1f;
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: floralwhite;
+  }
+}
+.bottle3 {
+  height: 120px;
+  width: 120px;
+  border: 2px solid #000;
+  position: relative;
+  background-color: red;
+  animation-name: colors3;
+  animation-duration: 10s;
+  /* animation-iteration-count: infinite; */
+}
+@keyframes colors3 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+/* .fortooltip{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip1 {
+  display: inline-block;
+}
+.tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+
+  position: absolute;
+  z-index: 1;
+}
+.tooltip1:hover .tooltiptext{
+  visibility: visible;
+} */
